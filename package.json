@@ -1,0 +1,29 @@
+{
+  "name": "Handlebars",
+  "version": "1.0.0",
+  "description": "Unit 14 Homework, 'Eat da Burga'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tglennd90/Handlebars.git"
+  },
+  "keywords": [],
+  "author": "Tatum Daily",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tglennd90/Handlebars/issues"
+  },
+  "homepage": "https://github.com/tglennd90/Handlebars#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "mysql": "^2.18.1"
+  }
+}
