@@ -24,6 +24,34 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+var orm = {
+  all: function(table, cb) {
+    var dbQuery = "SELECT * FROM " + table + ";";
 
+    connection.query(dbQuery, function(err, res) {
+      if (err) throw err;
+      cb(res);
+    });
+  },
+
+  create: function(table, cols, vals, cb) {
+    var dbQuery = "INSERT INTO ?? (??, ??) VALUES(?, ?)";
+
+    connection.query(dbQuery, [table, cols[0], cols[1], vals[0], vals[1]], function(err, data) {
+      if (err) throw err;
+      cb(data);
+    });
+  },
+
+  update: function(id, cb) {
+    var dbQuery = "UPDATE burgers SET devoured = true WHERE id = ?";
+
+    connection.query(dbQuery, [id], function(err, data) {
+      if (err) throw err;
+      cb();
+    });
+  },
+
+};
 
 module.exports = orm;
