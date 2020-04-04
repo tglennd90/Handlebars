@@ -12,7 +12,7 @@ var burger = {
             cb(res)
         });
     },
-
+    // Comment
     update: function(id, cb) {
         orm.update(id, cb)
     }
