@@ -14,7 +14,7 @@ if (process.env.newjaws_url) {
 }
 
 
-// console.log(process.env.JAWSDB_URL)
+
 
 connection.connect(function(err) {
   if (err) {
